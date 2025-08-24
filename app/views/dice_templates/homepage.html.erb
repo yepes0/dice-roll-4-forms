@@ -1,7 +1,8 @@
+
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Dice Roll</title>
+    <title>Target: Dice Form</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="icon" href="/icon.png">
@@ -10,21 +11,27 @@
   </head>
 
   <body class="pico">
-    <header>
-      <div class="container">
-        <nav>
-          <div>
-            <a href="/">
-              <strong>Home</strong>
-            </a>
-          </div>
-        </nav>
-      </div>
+    
     </header>
 
     <main>
       <div class="container">
-        <%= yield %>
+        <h1>Dice Roll</h1>
+
+<form action="/process_roll">
+  <label for="dice_field">
+    Number of dice to roll?
+  </label>
+  <input id="dice_field" type="text" name="dice">
+  
+  <label for="sides_field">
+    How many sides per die?
+  </label>
+  <input id="sides_field" type="text" name="sides">
+
+  <button type="submit">Roll!</button>
+</form>
+
       </div>
     </main>
   </body>
